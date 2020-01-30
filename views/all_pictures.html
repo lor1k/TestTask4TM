@@ -1,0 +1,33 @@
+<div data-ng-controller="picturesControler" data-ng-cloak>
+    <div class="controls">
+        <div class="controls_wrapper">
+            <p class="controls__text">Pictures on the page:</p>
+            <input type="number" id="pics_on_page" data-ng-model="picsOnPage">
+            <input type="button" value="Apply" data-ng-click="setNewAmountOfPics()" data-ng-disabled="favoritesShowing">
+            <input type="button" id='fav_btn' value="Show favorites!" data-ng-click="showFavorites()">
+        </div>
+    </div>
+    <div>
+        <div class="pic-block" data-ng-if="!err">
+            <div class="pic-block__wrapper">
+                <div data-ng-repeat="pic in pics" class="pic-block__img">
+                    <a href="/#!/picture?id={{pic.id}}" class="pic-block__link">
+                        <img src="{{pic.download_url}}" alt="{{pic.author}}" class="pic-block__img-item">
+                    </a>
+                    <div class="pic-block__favorite">
+                        <img src="svg/favorite_false.svg" alt="star_not_fav" class="pic-block__favorite_false" data-ng-click="toggleFavorite(pic.id)" data-ng-if="!favorites.includes(pic.id)">
+                        <img src="svg/favorite_true.svg" alt="star_fav" class="pic-block__favorite_true" data-ng-click="toggleFavorite(pic.id)" data-ng-if="favorites.includes(pic.id)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 data-ng-if="err">Error!</h1>
+    </div>
+    <div class="pagination-block">
+        <div class="pagination-block__buttons">
+            <input type="button" value="prev" data-ng-click="onPageButtonClick(-1)" data-ng-disabled="page==1 || favoritesShowing">
+            <span>{{page}}</span>
+            <input type="button" value="next" data-ng-click="onPageButtonClick(1)" data-ng-disabled="favoritesShowing">
+        </div>
+    </div>
+</div>
