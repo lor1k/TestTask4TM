@@ -1,12 +1,12 @@
-<div class="single-picture-block" data-ng-controller="singlePictureController">
-    <div class="single-picture-block__wrapper">
-        <div class="single-picture-block__wrapper__item">
-            <div class="single-picture-block__wrapper__item__wrapper">
-                <img src="{{preloaerImgSrc}}" alt="" id="img_preloader" class="">
-                <img src="{{pic.download_url}}" alt="" id="main-img" class="hidden">
+<div class="single-picture" data-ng-controller="singlePictureController">
+    <div class="single-picture__wrapper">
+        <div class="single-picture__wrapper__item">
+            <div class="single-picture__wrapper__item__wrapper">
+                <img src="{{ preloaerImgSrc }}" alt="Preloader" id="img_preloader">
+                <img src="{{ pic.download_url }}" alt="Selected image" id="main-img" class="hidden">
             </div>  
         </div>
-        <a href="/#!/main" class="single-picture-block__link">BACK</a>
+        <a href="/#!/main" class="single-picture__link">BACK</a>
     </div>
     <h1 data-ng-if="err">Error!</h1>
 </div>

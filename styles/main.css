@@ -104,33 +104,33 @@ header{
 .pagination-block__buttons input:last-child{
     border-radius: 0 10px 10px 0;
 }
-.single-picture-block{
+.single-picture{
     width: 100%;
     max-width: 1280px;  
     margin: 0 auto;
     padding: 40px 20px;
 }
-.single-picture-block__wrapper{
+.single-picture__wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: -20px;
 }
-.single-picture-block__wrapper__item{
+.single-picture__wrapper__item{
     display: flex;
     position: relative;
     justify-content: space-around;
     width: calc(80% - 40px);
     margin: 20px 20px 0 20px;
 }
-.single-picture-block__wrapper__item__wrapper{
+.single-picture__wrapper__item__wrapper{
     position: relative;
     padding-top: 100%;
     width: 100%;
     transition: all .3s linear;
     box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.75);
 }
-.single-picture-block img{
+.single-picture img{
     position: absolute;
     top: 0;
     left: 0;
@@ -138,7 +138,7 @@ header{
     height: 100%;
     object-fit: cover;
 }
-.single-picture-block__link{
+.single-picture__link{
     width: calc(80% - 40px);
     background-color: rgb(134, 134, 134);
     text-align: center;
@@ -148,7 +148,7 @@ header{
     padding: 7px;
     font-weight: 800;
 }
-.single-picture-block__link:hover{
+.single-picture__link:hover{
     background-color: rgb(177, 177, 177);
 }
 

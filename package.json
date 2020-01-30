@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-route": "^1.7.9",
     "angularjs": "0.0.1"
   }
 }
